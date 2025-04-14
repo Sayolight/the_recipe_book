@@ -48,7 +48,7 @@ export default function RecipePage() {
               alt={recipe?.strMeal || "Recipe Image"}
               className="sm:mr-4 text-center"
             />
-            <div className="flex flex-col sm:text-start text-center">
+            <div className="flex flex-col text-center">
               <h1 className="text-3xl font-bold">{recipe?.strMeal}</h1>
               <p>
                 Country:{" "}
@@ -59,6 +59,7 @@ export default function RecipePage() {
                   {recipe?.strArea}
                 </a>
               </p>
+              <p>{recipe?.strInstructions}</p>
               <table className="table-auto mb-2">
                 <thead>
                   <tr className="bg-gray-50 border-b border-gray-200">
@@ -85,8 +86,6 @@ export default function RecipePage() {
                   ))}
                 </tbody>
               </table>
-
-              <p>{recipe?.strInstructions}</p>
             </div>
           </div>
           <div className="flex flex-col w-full md:flex-1/3">
